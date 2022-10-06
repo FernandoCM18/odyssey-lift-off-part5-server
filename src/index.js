@@ -7,7 +7,7 @@ async function startApolloServer(typeDefs, resolvers) {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    introspection,
+    introspection: true,
     dataSources: () => {
       return {
         trackAPI: new TrackAPI(),
